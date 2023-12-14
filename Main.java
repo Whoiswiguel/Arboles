@@ -1,4 +1,3 @@
-import java.util.*;
 //Muñoz Hernandez Miguel Angel
 public class Main {
     public static void main(String[] args) {
@@ -7,36 +6,38 @@ public class Main {
         //Nodo raizArbolPtr = arbol.getRaiz();
 
         //nodos en el árbol 9,2,1,16,6,11,8,4
-        arbol.insertarValor(9);
-        arbol.insertarValor(2);
-        arbol.insertarValor(1);
-        arbol.insertarValor(16);
-        arbol.insertarValor(6);
-        arbol.insertarValor(11);
-        arbol.insertarValor(8);
-        arbol.insertarValor(4);
+        System.out.println("Insertando nodos en el árbol: 9,2,1,16,6,11,8,4");
+        arbol.insertarValor(9); // Inserta el valor 9 en el árbol
+        arbol.insertarValor(2); // Inserta el valor 2 en el árbol
+        arbol.insertarValor(1); // Inserta el valor 1 en el árbol
+        arbol.insertarValor(16); // Inserta el valor 16 en el árbol
+        arbol.insertarValor(6); // Inserta el valor 6 en el árbol
+        arbol.insertarValor(11); // Inserta el valor 11 en el árbol
+        arbol.insertarValor(8); // Inserta el valor 8 en el árbol
+        arbol.insertarValor(4); // Inserta el valor 4 en el árbol
 
         //Arbol horizontalmente
-        arbol.arbolHorizontal(0, arbol.getRaiz());
+        System.out.println("Arbol horizontalmente");
+        arbol.arbolHorizontal(0, arbol.getRaiz()); // Imprime el árbol horizontalmente
 
         //Recorridos en orden, preorden y postorden
         System.out.println("Recorrido en orden:");
-        arbol.inorden(arbol.getRaiz());
+        arbol.inorden(arbol.getRaiz()); // Imprime el recorrido en orden del árbol
         System.out.println("\nRecorrido en preorden:");
-        arbol.preorden(arbol.getRaiz());
+        arbol.preorden(arbol.getRaiz()); // Imprime el recorrido en preorden del árbol
         System.out.println("\nRecorrido en postorden:");
-        arbol.postorden(arbol.getRaiz());
+        arbol.postorden(arbol.getRaiz()); // Imprime el recorrido en postorden del árbol
 
         // Buscar un valor en el árbol
         int valorBuscado = 16;
-        if(arbol.busqueda(valorBuscado, arbol.getRaiz()))
+        if(arbol.busqueda(valorBuscado, arbol.getRaiz())) // Busca el valor 16 en el árbol
             System.out.println("\nEl valor " + valorBuscado + " se encuentra en el árbol.");
         else
             System.out.println("\nEl valor " + valorBuscado + " no se encuentra en el árbol.");
 
         // Eliminar los nodos del árbol
-        arbol.eliminarPredecesor(6,arbol.getRaiz());   
-        arbol.arbolHorizontal(0, arbol.getRaiz());
+        arbol.eliminarPredecesor(6,arbol.getRaiz()); // Elimina el predecesor del valor 6 en el árbol
+        System.out.println("Se ha eliminado el predecesor del valor 6 en el árbol.");
+        arbol.arbolHorizontal(0, arbol.getRaiz()); // Imprime el árbol horizontalmente
     }
 }
-
